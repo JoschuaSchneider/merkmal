@@ -1,0 +1,60 @@
+{
+  "name": "merkmal",
+  "type": "module",
+  "version": "0.0.2",
+  "description": "",
+  "source": "src/merkmal.ts",
+  "types": "./dist/merkmal.d.ts",
+  "main": "./dist/merkmal.cjs",
+  "exports": {
+    ".": {
+      "types": "./dist/merkmal.d.ts",
+      "require": "./dist/merkmal.js",
+      "default": "./dist/merkmal.modern.js"
+    },
+    "./tailwind": {
+      "types": "./dist/tailwind.d.ts",
+      "require": "./dist/tailwind.js",
+      "default": "./dist/tailwind.modern.js"
+    },
+    "./clsx": {
+      "types": "./dist/clsx.d.ts",
+      "require": "./dist/clsx.js",
+      "default": "./dist/clsx.modern.js"
+    }
+  },
+  "files": [
+    "./dist"
+  ],
+  "module": "./dist/merkmal.module.js",
+  "unpkg": "./dist/merkmal.umd.js",
+  "scripts": {
+    "build": "microbundle src/merkmal.ts src/tailwind.ts src/clsx.ts",
+    "dev": "microbundle watch",
+    "check": "tsc",
+    "test": "vitest",
+    "test:typecheck": "vitest typecheck"
+  },
+  "keywords": [
+    "variants",
+    "tailwind-merge",
+    "clsx",
+    "react"
+  ],
+  "author": "Joschua Schneider",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JoschuaSchneider/merkmal/issues"
+  },
+  "homepage": "https://github.com/JoschuaSchneider/merkmal#readme",
+  "devDependencies": {
+    "microbundle": "^0.15.1",
+    "prettier": "^2.8.4",
+    "typescript": "^4.9.5",
+    "vitest": "^0.29.2"
+  },
+  "optionalDependencies": {
+    "clsx": "^1.2.1",
+    "tailwind-merge": "^1.10.0"
+  }
+}
